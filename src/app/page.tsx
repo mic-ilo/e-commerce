@@ -1,6 +1,6 @@
-import prisma from "@/lib/db/prisma";
+import prisma from "@/lib/prisma";
 import Image from "next/image";
-import ProductCart from "@/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 
 export default async function Home() {
@@ -34,7 +34,7 @@ export default async function Home() {
 
       <div className="my-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 ">
         {products.slice(1).map((product) => (
-          <ProductCart product={product} key={product.id} />
+          <ProductCard product={product} key={product.id} />
         ))}
       </div>
     </div>
